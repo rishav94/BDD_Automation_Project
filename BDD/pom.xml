@@ -25,6 +25,12 @@
 		    <artifactId>cucumber-java</artifactId>
 		    <version>1.2.5</version>
 		</dependency>
+		
+	<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-plugin</artifactId>
+    <version>5.7.0</version>
+   </dependency>
 	<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 	<dependency>
 	    <groupId>info.cukes</groupId>
