@@ -1,16 +1,14 @@
 Feature: Application login	
 
-Scenario: Home page default login page
-Given User is on landing page
-When user loging into with "vhvjvjh" and password "gfgf78678"
-Then Home page is populated 
-And Cards are displayed are "true"
+Scenario: Negative test validating login
+Given Initilize the chrome broswer
+And Navigate to link "http://www.qaclickacademy.com/"
+And Click on Login link in home page to land on login page
+When user loging into with "test99@gmail.com" and password "123456" and logs in
+Then verify that user is couldnot loggedin
 
-Scenario: Home page default login page
-Given User is on landing page
-When user loging into with "john" and password "john678"
-Then Home page is populated 
-And Cards are displayed are "false"
+
+
 
 
 
