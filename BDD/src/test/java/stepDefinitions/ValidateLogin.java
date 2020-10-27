@@ -1,4 +1,4 @@
-package stepDefinition;
+package stepDefinitions;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
@@ -14,7 +14,7 @@ import resources.base;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-public class stepDefinition extends base {
+public class ValidateLogin extends base {
 
 	@Given("^Initilize the chrome broswer$")
 	public void initilize_the_chrome_broswer() throws Throwable {
@@ -44,11 +44,13 @@ public class stepDefinition extends base {
 		l.getLogin().click();
 	}
 
-	@Then("^verify that user is couldnot loggedin$")
+	@Then("^verify that user could not loggedin$")
 	public void verify_that_user_is_successfully_loggedin() throws Throwable {
 		LoginPage l = new LoginPage(driver);
 		Assert.assertTrue(l.invalidLoginAlert().isDisplayed());
 		driver.close();
 	}
+	
+	
 
 }
