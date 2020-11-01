@@ -14,7 +14,7 @@ import resources.base;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-public class ValidateLogin extends base {
+public class ValidateWorngCredentialLoginTest extends base {
 
 	@Given("^Initilize the chrome broswer$")
 	public void initilize_the_chrome_broswer() throws Throwable {
@@ -35,12 +35,11 @@ public class ValidateLogin extends base {
 		lp.getLogin().click();
 	}
 
-	@When("^user loging into with \"([^\"]*)\" and password \"([^\"]*)\" and logs in$")
-	public void user_loging_into_with_something_and_password_something_and_logs_in(String strArg1, String strArg2)
-			throws Throwable {
+	@When("^user loging into with (.+) and password (.+) and logs in$")
+	public void user_loging_into_with_and_password_and_logs_in(String username, String password) throws Throwable {
 		LoginPage l = new LoginPage(driver);
-		l.getLogin().sendKeys(strArg1);
-		l.getPassword().sendKeys(strArg2);
+		l.getLogin().sendKeys(username);
+		l.getPassword().sendKeys(password);
 		l.getLogin().click();
 	}
 
