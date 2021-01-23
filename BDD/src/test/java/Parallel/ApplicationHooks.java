@@ -3,12 +3,13 @@ package Parallel;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import resources.Base;
-import resources.ConfigReader;
+import qa.Base;
+import qa.ConfigReader;
 
 import java.io.IOException;
 import java.util.Properties;
 
+import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,11 @@ public class ApplicationHooks{
 	private WebDriver driver;
 	private ConfigReader cnf;
 	Properties prop;
-
+	@Before(value = "@Skip",order=0)
+	public void skip_Scenario(Scenario scenario) {
+		System.out.println("Skiped Scenario is:"+scenario.getName());
+		Assume.assumeTrue(false);
+	}
 	@Before(order = 0)
 	public void getProperty() {
 		cnf = new ConfigReader();

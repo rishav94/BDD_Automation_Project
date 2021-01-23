@@ -1,19 +1,20 @@
+@Login
 Feature: Application login 
 
 Background: User open login page
 Given user is on home page
 #Then page title should be "QA Click Academy | Selenium,Jmeter,SoapUI,Appium,Database testing,QA Training Academy"
-
+@Skip @Smoke
 Scenario: Login page title
 Given user is on login page
 When user gets the title of the login page
 #Then page title should be "WebServices Testing using SoapUI "
-
+@Smoke
 Scenario: Forgot Password link
 Given user is on login page
 Then forgot password link should be displayed
 
-
+@Regession @Smoke
 Scenario Outline: Login with incorrect credentials
 Given user is on login page
 When user enters invalid <username> and password <password> 
@@ -24,7 +25,7 @@ Examples:
 |wrongid@gmail.com| 123456|
 |test99@gmail.com| wrongpassword|
 
-
+@Regession @Skip
 Scenario: Login with correct credentials
 Given user is on login page
 When user enters valid mail "test99@gmail.com" and valid password "123456" 

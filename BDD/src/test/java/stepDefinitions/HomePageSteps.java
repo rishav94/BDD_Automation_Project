@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import junit.framework.Assert;
 import pageObjects.HomePage;
-import resources.Base;
+import qa.Base;
 
 import org.junit.runner.RunWith;
 

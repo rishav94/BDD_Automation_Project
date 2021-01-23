@@ -1,4 +1,4 @@
-package resources;
+package qa;
 
 import java.util.List;
 

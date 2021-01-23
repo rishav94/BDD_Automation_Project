@@ -3,8 +3,8 @@ package AppHooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import resources.Base;
-import resources.ConfigReader;
+import qa.Base;
+import qa.ConfigReader;
 
 import java.io.IOException;
 import java.util.Properties;

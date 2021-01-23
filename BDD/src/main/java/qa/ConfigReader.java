@@ -1,4 +1,4 @@
-package resources;
+package qa;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ public class ConfigReader {
 		prop = new Properties();
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream("./src/main/java/resources/data.properties");
+			fis = new FileInputStream("./src/main/java/qa/data.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

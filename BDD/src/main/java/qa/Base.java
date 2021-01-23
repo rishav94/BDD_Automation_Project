@@ -1,4 +1,4 @@
-package resources;
+package qa;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +27,7 @@ public class Base {
 	public WebDriver initializeDriver(String browser) throws IOException {
 //		prop = new Properties();
 //		FileInputStream fis = new FileInputStream(
-//				System.getProperty("user.dir") + "\\src\\main\\java\\resources\\data.properties");
+//				System.getProperty("user.dir") + "\\src\\main\\java\\qa\\data.properties");
 //		prop.load(fis);
 
 		if (browser.equalsIgnoreCase("chrome")) {

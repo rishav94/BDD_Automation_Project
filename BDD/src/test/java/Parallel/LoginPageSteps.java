@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 import junit.framework.Assert;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import resources.Base;
+import qa.Base;
 
 import org.junit.runner.RunWith;
 

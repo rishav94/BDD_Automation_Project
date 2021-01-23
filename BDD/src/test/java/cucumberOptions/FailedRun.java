@@ -10,11 +10,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"src/test/java/features"},
+		features= {"@target/failedRerun.txt"},
 		glue= {"stepDefinitions","AppHooks"},
 		//strict = true,
 		monochrome=true,
-		tags="not @Skip",
 		plugin= {"pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",
@@ -24,10 +23,7 @@ import io.cucumber.junit.CucumberOptions;
 				}
 		)
 
-//public class TestRunner extends AbstractTestNGCucumberTests {
-//
-//}
 
-public class TestRunner {
+public class FailedRun {
 
 }
