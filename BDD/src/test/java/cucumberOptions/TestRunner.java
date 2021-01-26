@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue= {"stepDefinitions","AppHooks"},
 		//strict = true,
 		monochrome=true,
-		tags="not @Skip",
+		tags="",
 		plugin= {"pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",

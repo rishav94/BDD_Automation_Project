@@ -36,17 +36,17 @@ public class HomePageSteps {
 
     @Then("^navigation menu should be displayed$")
     public void navigation_menu_should_be_displayed()  {
-        homePage.getNavigationBar().isDisplayed();
+        Assert.assertTrue(homePage.getNavigationBar().isDisplayed());
     }
 
     @Then("^News is visible to user$")
     public void news_is_visible_to_user()  {
-       System.out.println("Bla bla");
+       System.out.println("Code is not implemented yet");
     }
 
     @Then("^verify that title is \"([^\"]*)\"$")
     public void verify_that_title_is_something(String strArg1) {
-        homePage.getTitleText().isDisplayed();
+        Assert.assertTrue(homePage.getTitleText().isDisplayed());
     }
 
 }
